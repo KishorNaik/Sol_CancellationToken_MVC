@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+@model Sol_Demo.Models.ProcessModel
+
+<h1>Task Cancellation</h1>
+
+<a asp-route="longtask" class="btn btn-dark">Start</a>
+
+@if (Model != null)
+{
+    if (Model?.Status == "Process Complete")
+    {
+        <div class="alert alert-success">
+            <span>@Model.Status</span>
+        </div>
+    }
+
+}
